@@ -1,25 +1,18 @@
 import './components-style/App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import AnimesList from './components/AnimesList';
+import Nav from './components/Nav';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit
-          {' '}
-          <code>src/App.js</code>
-          {' '}
-          and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+
+        <Nav />
+        <Routes>
+          <Route exact path="/" element={<AnimesList />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
