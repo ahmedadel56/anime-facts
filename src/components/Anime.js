@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 const Anime = (props) => {
-  const { facts, image } = props;
+  const { image, name } = props;
   return (
     <>
-      <Link to={`/details/${facts}`}>
+      <Link to={`/details/${name}`}>
         <div>
           <img src={image} alt="anime" />
           <h4>
-            { facts}
+            { name}
           </h4>
         </div>
       </Link>
@@ -19,7 +19,7 @@ const Anime = (props) => {
 };
 
 Anime.propTypes = {
-  facts: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
 };
 
