@@ -1,19 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 
 const Anime = (props) => {
   const { image, name } = props;
   return (
     <>
-      <Link to={`/details/${name}`}>
+      <Link to={`/details/${image}`}>
         <div>
           <img src={image} alt="anime" />
           <h4>
-            { name}
+            {name}
           </h4>
         </div>
       </Link>
+      <Outlet />
     </>
   );
 };

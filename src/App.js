@@ -1,6 +1,7 @@
 import './components-style/App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import AnimesList from './components/AnimesList';
+import DetailsPage from './components/DetailsPage';
 import Nav from './components/Nav';
 
 function App() {
@@ -11,6 +12,9 @@ function App() {
         <Nav />
         <Routes>
           <Route exact path="/" element={<AnimesList />} />
+          <Route exact path="/details" element={<DetailsPage />}>
+            <Route path=":image" />
+          </Route>
         </Routes>
       </Router>
     </div>

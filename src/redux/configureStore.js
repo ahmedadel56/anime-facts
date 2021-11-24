@@ -1,16 +1,17 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-import logger from 'redux-logger';
 import anmiesReducer from './animes';
+import anmiesDetailsReducer from './animesDetails';
 
 const reducer = combineReducers({
   anmiesReducer,
+  anmiesDetailsReducer,
 
 });
 
 const store = createStore(
   reducer,
-  applyMiddleware(logger, thunk),
+  applyMiddleware(thunk),
 );
 
 export default store;
