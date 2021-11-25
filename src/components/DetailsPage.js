@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-// import { useParams } from 'react-router';
+import { useParams } from 'react-router';
 import { fetchAnimesDetails } from '../redux/animesDetails';
 /* eslint-disable camelcase */
 
@@ -10,16 +10,30 @@ const DetailsPage = () => {
     dispatch(fetchAnimesDetails());
   }, []);
   const animessState = useSelector((state) => state.anmiesDetailsReducer.animesDetails);
-  // const { image } = useParams();
-
-  // const filteredAnime = animessState.filter((anime) => anime.img === image);
+  const { key } = useParams();
+  const filteredAnime = animessState.slice(key - 1, key);
   return (
     <div className="details">
-      {animessState.map((element) => (
-        <div key={element.img}>
+      {filteredAnime.map((element) => (
+        <div key={element.key}>
+          <img src={element.img} alt="Anime Name" />
           <h2>
+            Total Facts :
+            {' '}
             {element.total_facts}
           </h2>
+          <div>
+            {element.data.map((fact) => (
+              <div key={fact.fact_id}>
+                <strong>
+                  {' '}
+                  {fact.fact_id}
+                </strong>
+                <p>{fact.fact}</p>
+
+              </div>
+            ))}
+          </div>
         </div>
       ))}
     </div>

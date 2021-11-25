@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import { Link, Outlet } from 'react-router-dom';
 
 const Anime = (props) => {
-  const { image, name } = props;
+  const { id, name, image } = props;
   return (
     <>
-      <Link to={`/details/${image}`}>
+      <Link to={`/details/${id}`}>
         <div>
           <img src={image} alt="anime" />
           <h4>
@@ -22,6 +22,7 @@ const Anime = (props) => {
 Anime.propTypes = {
   name: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
 };
 
 export default Anime;

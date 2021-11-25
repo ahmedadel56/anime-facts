@@ -13,7 +13,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<AnimesList />} />
           <Route exact path="/details" element={<DetailsPage />}>
-            <Route path=":image" />
+            <Route path=":key" element={<DetailsPage />} />
           </Route>
         </Routes>
       </Router>

@@ -14,7 +14,8 @@ const AnimesList = () => {
     <div>
       {AnmiesState.map((anime) => (
         <Anime
-          key={anime.anime_img}
+          key={anime.anime_name}
+          id={anime.anime_id}
           name={anime.anime_name}
           image={anime.anime_img}
         />
