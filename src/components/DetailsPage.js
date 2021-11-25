@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router';
+import { Link } from 'react-router-dom';
 import { fetchAnimesDetails } from '../redux/animesDetails';
 /* eslint-disable camelcase */
 
@@ -14,6 +15,11 @@ const DetailsPage = () => {
   const filteredAnime = animessState.slice(key - 1, key);
   return (
     <div className="details">
+      <Link to="/" className="col-3">
+        <h1 className="arrow-left">
+          {'<'}
+        </h1>
+      </Link>
       {filteredAnime.map((element) => (
         <div key={element.key}>
           <img src={element.img} alt="Anime Name" />
