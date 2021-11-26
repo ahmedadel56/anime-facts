@@ -24,7 +24,7 @@
 [Live Demo](https://animes-facts.netlify.app/)
 
 ## Video link
-[Video]()
+[Video](https://www.loom.com/share/a06925cfee6b4ea99dfafad02f70fb09)
 
 ## Getting Started
 
