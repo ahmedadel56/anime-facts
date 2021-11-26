@@ -21,24 +21,36 @@ const DetailsPage = () => {
         </h1>
       </Link>
       {filteredAnime.map((element) => (
-        <div key={element.key}>
-          <img src={element.img} alt="Anime Name" />
-          <h2>
-            Total Facts :
-            {' '}
-            {element.total_facts}
-          </h2>
-          <div>
-            {element.data.map((fact) => (
-              <div key={fact.fact_id}>
-                <strong>
-                  {' '}
-                  {fact.fact_id}
-                </strong>
-                <p>{fact.fact}</p>
-
+        <div className="div-detailed-card" key={element.key}>
+          <div className="detailed-card">
+            <div className="row">
+              <div className="images-detailed col-6">
+                <img src={element.img} className="img-thumbnail" alt="Anime Name" />
               </div>
-            ))}
+              <div className="name-p col-6 mr-2 mt-5 pt-5 mr-3">
+                <h4 className="card-title text-uppercase p-pokemon-card p-detailed-name">
+                  Total Facts :
+                  {' '}
+                  {element.total_facts}
+                </h4>
+              </div>
+              <div>
+                {element.data.map((fact) => (
+                  <div key={fact.fact_id}>
+                    <h5 className="p-d-title col-6">
+                      {' '}
+                      {'Fact number '}
+                      {fact.fact_id}
+                    </h5>
+                    <p className="p-detailed col-6 ">
+                      {fact.fact}
+                      <i className="fa fa-arrow-circle-o-right px-2" aria-hidden="true" />
+                    </p>
+
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       ))}
