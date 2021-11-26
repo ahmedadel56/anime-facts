@@ -18,17 +18,6 @@ export const fetchAnimes = () => (dispatch) => {
     }).then((info) => dispatch(getAnimes(info)));
 };
 
-// export const fetchAnimesDetails = () => (dispatch) => {
-//   fetch(URL)
-//     .then((response) => response.json())
-//     .then((info) => {
-//       const { data } = info;
-//       const promisesArray = data.map((result) => fetch(`${URL}/${result.anime_name}`)
-//         .then((response) => response.json()));
-//       return Promise.all(promisesArray);
-//     }).then((info) => dispatch(getAnimes(info)));
-// };
-
 const anmiesReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_ANIMES:
