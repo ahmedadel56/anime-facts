@@ -12,7 +12,7 @@ const Anime = (props) => {
           <Image src={image} alt="anime" />
           <Card body>
             <Card text style={{ border: 'none', textAlign: 'center' }}>
-              {name}
+              {name }
             </Card>
 
           </Card>
