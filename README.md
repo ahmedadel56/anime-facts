@@ -14,10 +14,11 @@
 
 - React
 - Redux
-- Bootstrap
+- Rect-Bootstrap
+- React-Icons
 - CSS3
-- Heroku
-- pokeapi
+- Netlify
+- [anime-facts-rest-api](https://chandan-02.github.io/anime-facts-rest-api/)
 
 ## Live Demo
 [Live Demo](https://animes-facts.netlify.app/)
