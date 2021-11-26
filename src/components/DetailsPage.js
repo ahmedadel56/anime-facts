@@ -1,8 +1,12 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Col, Container, Row } from 'react-bootstrap';
+import { BsFillSkipBackwardCircleFill } from 'react-icons/bs';
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 import { fetchAnimesDetails } from '../redux/animesDetails';
+
 /* eslint-disable camelcase */
 
 const DetailsPage = () => {
@@ -14,47 +18,53 @@ const DetailsPage = () => {
   const { key } = useParams();
   const filteredAnime = animessState.slice(key - 1, key);
   return (
-    <div className="details">
-      <Link to="/" className="col-3">
-        <h1 className="arrow-left">
-          {'<'}
-        </h1>
-      </Link>
+    <Container style={{ minHeight: '100vh' }}>
       {filteredAnime.map((element) => (
-        <div className="div-detailed-card" key={element.key}>
-          <div className="detailed-card">
-            <div className="row">
-              <div className="images-detailed col-6">
-                <img src={element.img} className="img-thumbnail" alt="Anime Name" />
-              </div>
-              <div className="name-p col-6 mr-2 mt-5 pt-5 mr-3">
-                <h4 className="card-title text-uppercase p-pokemon-card p-detailed-name">
-                  Total Facts :
-                  {' '}
-                  {element.total_facts}
-                </h4>
-              </div>
-              <div>
-                {element.data.map((fact) => (
-                  <div key={fact.fact_id}>
-                    <h5 className="p-d-title col-6">
-                      {' '}
-                      {'Fact number '}
-                      {fact.fact_id}
-                    </h5>
-                    <p className="p-detailed col-6 ">
-                      {fact.fact}
-                      <i className="fa fa-arrow-circle-o-right px-2" aria-hidden="true" />
-                    </p>
+        <div key={element.key}>
+          <Row>
+            <Col md={3}>
+              <Link to="/">
+                <h1>
+                  <BsFillSkipBackwardCircleFill style={{ color: 'white' }} />
+                </h1>
+              </Link>
+            </Col>
+            <Col md={6}>
+              <img src={element.img} alt="Anime Name" />
+            </Col>
+          </Row>
+          <Row>
+            <Col style={{
+              display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '2rem 0', color: 'white',
+            }}
+            >
+              <h2>Total Facts : </h2>
+              <h3>{element.total_facts}</h3>
+            </Col>
+          </Row>
+          <Container style={{ border: '0.2rem solid white', borderRadius: '30px 30px 0 0' }}>
 
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+            {element.data.map((fact) => (
+              <Row key={fact.fact_id} style={{ borderBottom: '2px solid white' }}>
+                <Col md={4} style={{ textAlign: 'end', color: 'white', fontWeight: '800' }}>
+                  <h5>
+                    {' '}
+                    {'Fact number '}
+                    {fact.fact_id}
+                    { ': '}
+                  </h5>
+                </Col>
+                <Col>
+                  <p style={{ fontSize: '20px', fontWeight: '500' }}>
+                    {fact.fact}
+                  </p>
+                </Col>
+              </Row>
+            ))}
+          </Container>
         </div>
       ))}
-    </div>
+    </Container>
   );
 };
 
