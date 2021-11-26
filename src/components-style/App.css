@@ -5,6 +5,7 @@ body {
 #root {
   height: max-content;
 }
+
 .App {
   background-color: #4369b2;
   padding-top: 2rem;
