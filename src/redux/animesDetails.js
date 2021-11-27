@@ -1,4 +1,4 @@
-const GET_ANIMES_DETAILS = 'anime-facts/animesDetails/GET_ANIMES_DETAILS';
+export const GET_ANIMES_DETAILS = 'anime-facts/animesDetails/GET_ANIMES_DETAILS';
 const URL = 'https://anime-facts-rest-api.herokuapp.com/api/v1';
 const initialState = {
   animesDetails: [],

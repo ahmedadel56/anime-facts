@@ -1,13 +1,13 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
-import '@testing-library/jest-dom/extend-expect';
 import { BrowserRouter } from 'react-router-dom';
 import DetailsPage from '../components/DetailsPage';
 import Header from '../components/Header';
 import AnimesList from '../components/AnimesList';
 import store from '../redux/configureStore';
 import Anime from '../components/Anime';
+import SearchBar from '../components/SearchBar';
 
 const MockObj = {
   name: 'test',
@@ -58,6 +58,17 @@ describe('Detailed Anime component', () => {
             image={MockObj.image}
           />
         </BrowserRouter>,
+      )
+      .toJSON();
+    expect(component).toMatchSnapshot();
+  });
+
+  test('render Search Bar', () => {
+    const component = renderer
+      .create(
+        <Provider store={store}>
+          <SearchBar />
+        </Provider>,
       )
       .toJSON();
     expect(component).toMatchSnapshot();

@@ -1,5 +1,5 @@
-const GET_ANIMES = 'anime-facts/animes/GET_ANIMES';
-const FILTER_ANIMES = 'anime-facts/animes/FILTER_ANIMES';
+export const GET_ANIMES = 'anime-facts/animes/GET_ANIMES';
+export const FILTER_ANIMES = 'anime-facts/animes/FILTER_ANIMES';
 const URL = 'https://anime-facts-rest-api.herokuapp.com/api/v1';
 const initialState = {
   animes: [],
