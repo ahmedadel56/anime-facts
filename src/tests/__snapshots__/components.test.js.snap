@@ -1,0 +1,183 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Detailed Anime component matches Header component snapshot 1`] = `
+<div
+  className="row"
+  style={
+    Object {
+      "background": "#588cef",
+      "color": "white",
+      "marginBottom": "3rem",
+    }
+  }
+>
+  <div
+    className="col"
+    style={
+      Object {
+        "paddingLeft": "0",
+      }
+    }
+  >
+    <img
+      alt="Logo Image"
+      className=""
+      src="logo.jpeg"
+    />
+  </div>
+  <div
+    className="col"
+    style={
+      Object {
+        "display": "flex",
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "textAlign": "center",
+      }
+    }
+  >
+    <h1>
+      ANIMES FACTS
+    </h1>
+    <h2>
+      13 awesome Animes 
+    </h2>
+  </div>
+</div>
+`;
+
+exports[`Detailed Anime component render Search Bar 1`] = `
+<input
+  className="form-control form-control-lg"
+  onChange={[Function]}
+  placeholder="Search for Anime"
+  style={
+    Object {
+      "marginBottom": "1rem",
+    }
+  }
+  type="text"
+/>
+`;
+
+exports[`Detailed Anime component render filterd Anime 1`] = `
+<div
+  className="container"
+  style={
+    Object {
+      "minHeight": "100vh",
+    }
+  }
+/>
+`;
+
+exports[`Detailed Anime component render filterd Anime 2`] = `
+<div
+  className="container"
+  style={
+    Object {
+      "minHeight": "100vh",
+    }
+  }
+>
+  <div
+    className="row"
+    style={
+      Object {
+        "background": "#588cef",
+        "color": "white",
+        "marginBottom": "3rem",
+      }
+    }
+  >
+    <div
+      className="col"
+      style={
+        Object {
+          "paddingLeft": "0",
+        }
+      }
+    >
+      <img
+        alt="Logo Image"
+        className=""
+        src="logo.jpeg"
+      />
+    </div>
+    <div
+      className="col"
+      style={
+        Object {
+          "display": "flex",
+          "flexDirection": "column",
+          "justifyContent": "center",
+          "textAlign": "center",
+        }
+      }
+    >
+      <h1>
+        ANIMES FACTS
+      </h1>
+      <h2>
+        13 awesome Animes 
+      </h2>
+    </div>
+  </div>
+  <input
+    className="form-control form-control-lg"
+    onChange={[Function]}
+    placeholder="Search for Anime"
+    style={
+      Object {
+        "marginBottom": "1rem",
+      }
+    }
+    type="text"
+  />
+  <div
+    className="row"
+  />
+</div>
+`;
+
+exports[`Detailed Anime component render filterd Anime 3`] = `
+<a
+  href="/details/123"
+  onClick={[Function]}
+>
+  <div
+    className="card"
+    style={
+      Object {
+        "background": "inherit",
+        "marginBottom": "2rem",
+      }
+    }
+  >
+    <img
+      alt="anime"
+      className=""
+      src="imange"
+    />
+    <div
+      className="card"
+    >
+      <div
+        className="card-body"
+      >
+        <div
+          className="card text-true"
+          style={
+            Object {
+              "border": "none",
+              "textAlign": "center",
+            }
+          }
+        >
+          test
+        </div>
+      </div>
+    </div>
+  </div>
+</a>
+`;
