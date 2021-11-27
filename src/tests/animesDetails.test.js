@@ -11,7 +11,7 @@ describe('Redux anmies Details reducer tests', () => {
       payload: [{ id: 'test' }],
     };
     expect(anmiesDetailsReducer({ animesDetails: {} }, action)).toEqual({
-        animesDetails: [{ id: 'test' }],
+      animesDetails: [{ id: 'test' }],
     });
   });
 });
